@@ -5,6 +5,12 @@ FlowRouter.route("/",{
   }
 });
 
+FlowRouter.route("/login",{
+  name: "Login",
+  action(params){
+    renderMainLayoutWith(<UserLogin />);
+  }
+});
 
 function renderMainLayoutWith(component){
   ReactLayout.render(MainLayout,{
